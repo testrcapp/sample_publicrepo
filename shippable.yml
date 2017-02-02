@@ -4,7 +4,18 @@ language: node_js
 # Version number
 node_js:
   - 0.12
+env:
+  global:
+    - TEST=FOO
+    - secure: yB62P/ixTBfHSoghXkt5DJ3fv6UdVYW+h2Q32EQkFU4izbtZzTsiw8zgjYzzDR6g5KOyUXFMWqljtwrREnF93G+3gE5znrsXRY2rbrCcoMoC+7jte4hqLannsyFwdIp+Y6YsZWfV95b9syoKzG5Bgpi2o8dcY0NKBsrTYvYAT3/uWYGmEdZcYouAsRTQL5q++FR+2xEaCUT8uiH2ZOw2IA4QHxlDU+fBcNZIO3LE44RpRUKt+iXd18yuheapM8/BUTegNrxLJ8OB5G5K3JCh+7u4g9qPtHdGfBkqH8HaUhgfCY90pS+O31lA2Qz0zEqH0mdqsmScF5ikLfaDlpt0rQ==
 
+  matrix:
+    - M1=ONE
+branches:
+  only:
+    - master
+  except:
+    - nonmaster
 build:
   pre_ci_boot:
     image_name: drydock/u14nod
@@ -12,18 +23,12 @@ build:
     pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
-  pre_ci:
-    - echo "this is master branch"
+ 
 
   ci:
     - npm install
+    - echo $TEST
+    - echo $secure
 
-  post_ci:
-    - ls -a
-    - pwd
 
-  cache: true
-
-  cache_dir_list: 
-    - $SHIPPABLE_BUILD_DIR/node_modules
-
+ 
