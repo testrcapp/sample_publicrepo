@@ -30,7 +30,7 @@ build:
     image_name: IMAGE_NAME
     image_tag: IMAGE_TAG
     pull: IMAGE_PULL
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+ #   options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
  
 
