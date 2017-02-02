@@ -28,7 +28,7 @@ build:
  
 
   ci:
-    - npm install
+    - node --version
     - echo $TEST
     - echo $secure
 
