@@ -10,6 +10,10 @@ env:
   global:
     - TEST=FOO
     - secure: yB62P/ixTBfHSoghXkt5DJ3fv6UdVYW+h2Q32EQkFU4izbtZzTsiw8zgjYzzDR6g5KOyUXFMWqljtwrREnF93G+3gE5znrsXRY2rbrCcoMoC+7jte4hqLannsyFwdIp+Y6YsZWfV95b9syoKzG5Bgpi2o8dcY0NKBsrTYvYAT3/uWYGmEdZcYouAsRTQL5q++FR+2xEaCUT8uiH2ZOw2IA4QHxlDU+fBcNZIO3LE44RpRUKt+iXd18yuheapM8/BUTegNrxLJ8OB5G5K3JCh+7u4g9qPtHdGfBkqH8HaUhgfCY90pS+O31lA2Qz0zEqH0mdqsmScF5ikLfaDlpt0rQ==
+    - IMAGE_NAME=shippabledocker/samplenodercimg
+    - IMAGE_TAG=docker
+    - IMAGE_PULL=true
+   
 
   matrix:
     - M1=ONE
@@ -20,11 +24,12 @@ branches:
     - nonmaster
 build:
   pre_ci:
-    - docker build -t=shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER .
+    - export IMAGE_TAG="master.23"
+    - echo $IMAGE_TAG
   pre_ci_boot:
-    image_name: drydock/u14nod
-    image_tag: prod
-    pull: true
+    image_name: IMAGE_NAME
+    image_tag: IMAGE_TAG
+    pull: IMAGE_PULL
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
  
@@ -35,7 +40,11 @@ build:
     - echo $TEST
     - echo $secure
     - echo $M1
+    - echo $IMAGE_NAME
+    - echo $IMAGE_TAG
+    - echo $IMAGE_PULL
   post_ci:
+    - docker build -t=shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER .
     - docker push shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER
 
 integrations:
