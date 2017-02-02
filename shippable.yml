@@ -59,9 +59,9 @@ integrations:
       recipients:
         - '#Private-room'
         - '@shiphitchcock3'
-     - integrationName: irc
-       type: irc
-       recipients:
+    - integrationName: irc
+      type: irc
+      recipients:
         - "chat.freenode.net#test1"
           
        
