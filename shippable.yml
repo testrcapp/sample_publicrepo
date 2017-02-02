@@ -27,10 +27,10 @@ build:
     - export IMAGE_TAG="master.23"
     - echo $IMAGE_TAG
   pre_ci_boot:
-    image_name: IMAGE_NAME
-    image_tag: IMAGE_TAG
-    pull: IMAGE_PULL
- #   options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+    image_name: $IMAGE_NAME
+    image_tag: $IMAGE_TAG
+    pull: $IMAGE_PULL
+    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
  
 
