@@ -61,6 +61,9 @@ integrations:
     - integrationName: ship-ecr
       type: ecr
       region: us-west-2
+      branches:
+        except:
+          - n*
         
     - integrationName: ship-quay
       type: quay.io
