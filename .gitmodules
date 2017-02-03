@@ -1,3 +1,0 @@
-[submodule "testprivate"]
-	path = testprivate
-	url = git@github.com:shiptest-rc-ow/testprivate.git
