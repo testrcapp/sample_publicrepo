@@ -35,7 +35,7 @@ build:
 
   ci:
     - node --version
-    - djkvfdvn
+    #- djkvfdvn
     - echo $TEST
     - echo $secure
     - echo $M1
