@@ -45,8 +45,10 @@ build:
   post_ci:
     - docker build -t=$IMAGE_NAME:$BRANCH.$BUILD_NUMBER .
     - docker push $IMAGE_NAME:$BRANCH.$BUILD_NUMBER
-    - docker build -t=gcr.io/vidya-project/node1-img:$BRANCH.$BUILD_NUMBER  .
-    - docker push gcr.io/vidya-project/node1-img:$BRANCH.$BUILD_NUMBER  
+    - docker build -t=gcr.io/vidya-project/node1-img:master.33  .
+    - docker push gcr.io/vidya-project/node1-img:master.33
+    - docker build -t=742038439709.dkr.ecr.us-west-2.amazonaws.com/samplenode .
+    - docker push 742038439709.dkr.ecr.us-west-2.amazonaws.com/samplenode
 
 integrations:
   hub:
@@ -54,6 +56,8 @@ integrations:
       type: docker 
     - integrationName: ship-gcr
       type: gcr
+    - integrationName: ship-ecr
+      type: ecr
   
   notifications:
     - integrationName: email
