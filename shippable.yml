@@ -66,7 +66,7 @@ integrations:
       type: quay.io
       branches:
         only:
-          - m
+          - m*
   
   notifications:
     - integrationName: email
