@@ -10,8 +10,8 @@ env:
   global:
     - TEST=FOO
     - secure: yB62P/ixTBfHSoghXkt5DJ3fv6UdVYW+h2Q32EQkFU4izbtZzTsiw8zgjYzzDR6g5KOyUXFMWqljtwrREnF93G+3gE5znrsXRY2rbrCcoMoC+7jte4hqLannsyFwdIp+Y6YsZWfV95b9syoKzG5Bgpi2o8dcY0NKBsrTYvYAT3/uWYGmEdZcYouAsRTQL5q++FR+2xEaCUT8uiH2ZOw2IA4QHxlDU+fBcNZIO3LE44RpRUKt+iXd18yuheapM8/BUTegNrxLJ8OB5G5K3JCh+7u4g9qPtHdGfBkqH8HaUhgfCY90pS+O31lA2Qz0zEqH0mdqsmScF5ikLfaDlpt0rQ==
-    - IMAGE_NAME=shippabledocker/samplenodercimg
-    - IMAGE_TAG=docker
+    - IMAGE_NAME=shippabledocker/sample_node_pvt
+    - IMAGE_TAG=latest.40
     - IMAGE_PULL=true
    
 
@@ -24,15 +24,14 @@ branches:
     - nonmaster
 build:
   pre_ci:
-    - export IMAGE_TAG="master.23"
+    - export IMAGE_TAG="latest"
     - echo $IMAGE_TAG
+    
   pre_ci_boot:
     image_name: $IMAGE_NAME
     image_tag: $IMAGE_TAG
     pull: $IMAGE_PULL
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
-
- 
+    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false' 
 
   ci:
     - node --version
@@ -44,8 +43,8 @@ build:
     - echo $IMAGE_TAG
     - echo $IMAGE_PULL
   post_ci:
-    - docker build -t=shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER .
-    - docker push shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER
+    - docker build -t=$IMAGE_NAME:$BRANCH.$BUILD_NUMBER .
+    - docker push $IMAGE_NAME:$BRANCH.$BUILD_NUMBER
 
 integrations:
   hub:
