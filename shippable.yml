@@ -16,7 +16,7 @@ env:
     - IMAGE_NAME=shippabledocker/sample_node_pvt
     - IMAGE_TAG=latest.40
     - IMAGE_PULL=true
-   matrix:
+  matrix:
     - M1=ONE
 #Testing for include and exclude branches
 branches:
