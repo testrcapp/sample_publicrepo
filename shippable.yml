@@ -16,7 +16,7 @@ env:
     - IMAGE_NAME=shippabledocker/sample_node_pvt
     - IMAGE_TAG=latest.40
     - IMAGE_PULL=true
-    - BUILD_NUM=$SHIPPABLE_JOB_NUMBER 
+    
     
        
     
@@ -53,7 +53,7 @@ build:
     - echo $IMAGE_TAG
     - echo $IMAGE_PULL
     - echo $custom
-    - echo $BUILD_NUM
+    - echo $BUILD_NUM #echoes the envs specified in the payload of project-event trigger
   post_ci:
   # Testing docker build and push
     - docker build -t=$IMAGE_NAME:$IMAGE_TAG .
