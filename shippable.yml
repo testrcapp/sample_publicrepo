@@ -53,6 +53,8 @@ build:
     - echo $IMAGE_TAG
     - echo $IMAGE_PULL
     - echo $custom
+    - echo $FOO
+    - echo $GOO
     - echo $BUILD_NUM #echoes the envs specified in the payload of project-event trigger
   post_ci:
   # Testing docker build and push
