@@ -16,6 +16,7 @@ env:
     - IMAGE_NAME=shippabledocker/sample_node_pvt
     - IMAGE_TAG=latest.40
     - IMAGE_PULL=true
+    
   matrix:
     - M1=ONE
 #Testing for include and exclude branches
@@ -48,7 +49,8 @@ build:
     - echo $IMAGE_NAME
     - echo $IMAGE_TAG
     - echo $IMAGE_PULL
-    - echo $foso
+    - echo $custom
+    - echo $BUILD_NUM
   post_ci:
   # Testing docker build and push
     - docker build -t=$IMAGE_NAME:$IMAGE_TAG .
