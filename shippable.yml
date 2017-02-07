@@ -48,6 +48,7 @@ build:
     - echo $IMAGE_NAME
     - echo $IMAGE_TAG
     - echo $IMAGE_PULL
+    - echo $foso
   post_ci:
   # Testing docker build and push
     - docker build -t=$IMAGE_NAME:$IMAGE_TAG .
