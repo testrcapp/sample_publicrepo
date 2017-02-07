@@ -16,6 +16,9 @@ env:
     - IMAGE_NAME=shippabledocker/sample_node_pvt
     - IMAGE_TAG=latest.40
     - IMAGE_PULL=true
+    - BUILD_NUM=$SHIPPABLE_JOB_NUMBER 
+    
+       
     
   matrix:
     - M1=ONE
