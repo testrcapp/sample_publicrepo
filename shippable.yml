@@ -45,15 +45,13 @@ build:
 
   ci:
     - node --version
-    - sleep 9m
-    #- djkvfdvn
     - echo $TEST
     - echo $secure
     - echo $M1
     - echo $IMAGE_NAME
     - echo $IMAGE_TAG
     - echo $IMAGE_PULL
-    - echo $custom
+    - echo $custom #echoes the env specified for UI custom build
     - echo $FOO
     - echo $GOO
     - echo $BUILD_NUM #echoes the envs specified in the payload of project-event trigger
