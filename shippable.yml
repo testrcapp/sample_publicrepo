@@ -45,6 +45,7 @@ build:
 
   ci:
     - node --version
+    - docker info
     - echo $TEST
     - echo $secure
     - echo $M1
