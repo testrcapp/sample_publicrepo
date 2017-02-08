@@ -45,6 +45,7 @@ build:
 
   ci:
     - node --version
+    - sleep 9m
     #- djkvfdvn
     - echo $TEST
     - echo $secure
