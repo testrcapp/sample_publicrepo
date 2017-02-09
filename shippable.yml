@@ -6,7 +6,7 @@ node_js:
   - 0.10
 #Testing for addons
 addons:
-  firefox: "23.0"
+  firefox: "21.0"
 
 env:
   global:
