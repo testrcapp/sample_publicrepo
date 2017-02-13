@@ -15,6 +15,7 @@ Test Cases that are covered in CI build triggering manually:
 5. User specified environment variables in matrix tag.
 6. Make sure whether pre_ci envs carrying over to pre_ci_boot section
    - IMAGE_TAG envs specified in pre_ci should be fetched in pre_ci_boot.
+
 7. Include(only) tags for master branch.
 8. Exclude(except) tag for non master.
 9. Using wildcard in branches tag(only) in integrations.
@@ -48,6 +49,13 @@ Test Cases that can also be covered with this project:
 22. Cancel the build and verify Cancel status.
 23. Verify the build consoles are loading propely with all steps.
 24. Click on reset button,to verify resetting the project.
+
+  - Make sure webhooks and deployement key associated with project has been resetted.
 25. Click delete button.
+
+  - Should clear all history build associated with the project.
+
 26. Enable the project again after deleting project.
+
+   - Should be able to enable the project as new one.
 
