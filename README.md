@@ -26,6 +26,8 @@ Test Cases that are covered in CI build triggering manually:
 14. Build status(waiting,proccessing,success).
 15. Verify the status badge in UI
 
+  - projectsettings-> Badges
+
 Test Cases that are covered on triggering a webhook build:
 
 16. Enable the commit button
