@@ -81,7 +81,7 @@ integrations:
   #ECR integration
     - integrationName: ship-ecr
       type: ecr
-     # region: us-west-2
+      region: us-west-2
       branches: #Testing the wildcards for branches exclude
         except:
           - n*
