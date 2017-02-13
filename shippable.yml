@@ -36,7 +36,7 @@ build:
   #Testing for pre_ci carrying over to pre_ci_boot
     - export IMAGE_TAG="latest.114"
     - echo $IMAGE_TAG
-    - apt-get install firefox
+   
     
   pre_ci_boot:
     image_name: $IMAGE_NAME
