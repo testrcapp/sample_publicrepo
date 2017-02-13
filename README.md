@@ -9,9 +9,12 @@ Test Cases that are covered in CI build triggering manually:
 1. Valid languages and version.
 2. Valid addons
 3. User specified environment variables in global tag.
-4. Secure environment variables(encrypting envs from shippable UI) in global tag.
+   - Envs (eg: TEST=FOO) is specified in env tag.
+4. Secure environment variables in global tag.
+   - Encrypted from shippable UI and specified in env tag.
 5. User specified environment variables in matrix tag.
 6. Make sure whether pre_ci envs carrying over to pre_ci_boot section
+   - IMAGE_TAG envs specified in pre_ci should be fetched in pre_ci_boot.
 7. Include(only) tags for master branch.
 8. Exclude(except) tag for non master.
 9. Using wildcard in branches tag(only) in integrations.
