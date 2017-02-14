@@ -20,6 +20,8 @@ Test Cases that are covered in CI build triggering manually:
 8. Exclude(except) tag for non master.
 9. Using wildcard in branches tag(only) in integrations.
 10. Private submodules are enabled.
+    - verify the gitsync step in console to verify the submodules are enabled.
+
 11. Docker build and push(private image)
 12. GCR build and push
 13. Quay.io build and push
@@ -40,10 +42,6 @@ git:
 ``` 
      
 19. Verify the failed Build status(make the build fail by invalid comments in yml).
-
-
-Test Cases that can also be covered with this project:
-
 20. Custom build( specify envs from UI(custom: foo)  and verify its taken to the build).
 21. Rerun the custom build.It should run with the custom envs from the original build.
 22. Cancel the build and verify Cancel status.
