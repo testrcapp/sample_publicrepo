@@ -29,33 +29,20 @@ Test Cases that are covered in CI build triggering manually:
 13. Quay.io build and push
 13. ECR build and push
 14. Build status(waiting,proccessing,success).
-15. Verify the status badge in UI
-
-  - projectsettings-> Badges
+15. Custom build( specify envs from UI(custom: foo)  and verify its taken to the build).
+16. Rerun the custom build.It should run with the custom envs from the original build.
 
 Test Cases that are covered on triggering a webhook build:
 
-16. Enable the commit button
-17. Project should sync when we trigger a webhook build.
-18. Turning off the submodules.
+17. Enable the commit button
+18. Project should sync when we trigger a webhook build.
+19. Turning off the submodules.
     ```
 git:
      submodules: false
 ``` 
      
-19. Verify the failed Build status(make the build fail by invalid comments in yml).
-20. Custom build( specify envs from UI(custom: foo)  and verify its taken to the build).
-21. Rerun the custom build.It should run with the custom envs from the original build.
-22. Cancel the build and verify Cancel status.
-23. Verify the build consoles are loading propely with all steps.
-24. Click on reset button,to verify resetting the project.
 
-  - Make sure webhooks and deployement key associated with project has been resetted.
-25. Click delete button.
 
-  - Should clear all history build associated with the project.
 
-26. Enable the project again after deleting project.
-
-   - Should be able to enable the project as new one.
 
