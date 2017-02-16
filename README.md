@@ -10,6 +10,7 @@ Test Cases that are covered in CI build triggering manually:
 
 
 1. Valid languages and version.
+   - Triggers a single build with lang `node_js` having  version `0.10`
 2. User specified environment variables in global tag.
    - Envs (eg: TEST=FOO) is specified in env tag.
 3. Secure environment variables in global tag.
