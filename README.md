@@ -1,4 +1,4 @@
-# sampleNod
+# coretest_singlebuildNod
 A SampleNod project to test basic cases for a single build.
 
 This project is enabled in `shiptest-rc-ow` account in shippable.
