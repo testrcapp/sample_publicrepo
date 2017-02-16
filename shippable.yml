@@ -4,10 +4,6 @@ language: node_js
 # Version number
 node_js:
   - 0.10
-#Testing for addons
-addons:
-  firefox: "25.0"
-
 env:
   global:
   #Testing for user defined envs and secure envs
