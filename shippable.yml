@@ -95,19 +95,7 @@ integrations:
         - revathi@shippable.com
       on_success: always
       on_failure: always
-    - integrationName: ship-slack-1
-      type: slack
-      recipients:
-        - "#random"
-      on_success: always
-      on_failure: always
-    - integrationName: ship-hipchat-1
-      type: hipchat
-      recipients:
-        - '#Private-room'
-        - '@shiphitchcock3'
-      on_success: always
-      on_failure: always
+   
     - integrationName: irc
       type: irc
       recipients:
