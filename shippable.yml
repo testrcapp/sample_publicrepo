@@ -68,7 +68,7 @@ build:
 integrations:
   hub:
  #Docker integration
-    - integrationName: ship-docker-1 
+    - integrationName: ship-docker
       type: docker 
   #GCR integration
     - integrationName: ship-gcr
