@@ -36,15 +36,7 @@ Test Cases that are covered in CI build triggering manually:
 15. Custom build( specify envs from UI(custom: foo)  and verify its taken to the build).
 16. Rerun the custom build.It should run with the custom envs from the original build.
 
-Test Cases that are covered on triggering a webhook build:
 
-17. Enable the commit button
-18. Project should sync when we trigger a webhook build.
-19. Turning off the submodules.
-    ```
-git:
-     submodules: false
-``` 
      
 
 
