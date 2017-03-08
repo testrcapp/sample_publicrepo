@@ -41,6 +41,10 @@ build:
 
   ci:
     - node --version
+    - lsb_release -a
+    - docker --version
+    - docker info
+    - docker ps
     - echo $TEST
     - echo $secure
     - echo $M1
