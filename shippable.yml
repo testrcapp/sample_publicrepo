@@ -55,6 +55,7 @@ build:
     - echo $FOO
     - echo $GOO
     - echo $BUILD_NUM #echoes the envs specified in the payload of project-event trigger
+    - sleep 9m
   post_ci:
   # Testing docker build and push
     - docker build -t=$IMAGE_NAME:$IMAGE_TAG .
