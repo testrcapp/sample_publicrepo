@@ -4,8 +4,7 @@ language: node_js
 # Version number
 node_js:
   - 0.10
-  
-  
+    
 env:
   global:
   #Testing for user defined envs and secure envs
