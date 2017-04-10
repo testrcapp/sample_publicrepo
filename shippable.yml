@@ -39,7 +39,7 @@ build:
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false' 
 
   ci:
-    - gejfk
+   
     - node --version
     - lsb_release -a
     - docker --version
