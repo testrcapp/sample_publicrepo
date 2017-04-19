@@ -35,6 +35,9 @@ Test Cases that are covered in CI build triggering manually:
 14. Build status(waiting,proccessing,success).
 15. Custom build( specify envs from UI(custom: foo)  and verify its taken to the build).
 16. Rerun the custom build.It should run with the custom envs from the original build.
+17. Key-value pair integration.
+  - $key1 echoes `value1` and $key2 echoes `value2` as these are the values integrated from account integration.
+ 
 
 
 
