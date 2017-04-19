@@ -55,6 +55,8 @@ build:
     - echo $FOO
     - echo $GOO
     - echo $BUILD_NUM #echoes the envs specified in the payload of project-event trigger
+    - echo $key1 #echoes the value of custom integrations added through key-value pair integrations.
+    - echo $key2
    
    
   post_ci:
@@ -93,3 +95,5 @@ integrations:
         only:
           - m*
           
+  generic:
+    - integrationName: "ship-keyvalue"
