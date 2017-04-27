@@ -98,4 +98,12 @@ integrations:
           
   generic:
     - integrationName: "ship-keyvalue"
-   
+
+  notifications:
+    - integrationName: email         
+      type: email        
+      recipients: 
+        - shiptest.rc.ow@gmail.com
+        - shiptest.rc.me@gmail.com
+      on_success: always 
+      
