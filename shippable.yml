@@ -23,8 +23,8 @@ branches:
   except:
     - nonmaster
 #Uncomment below section to disable the private submodules
-#git:
-   #submodules: false
+git:
+   submodules: false
 build:
   pre_ci:
   #Testing for pre_ci carrying over to pre_ci_boot
