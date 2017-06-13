@@ -28,11 +28,11 @@ build:
    # - echo $IMAGE_TAG
    
     
- # pre_ci_boot:
-  #  image_name: $IMAGE_NAME
-  #  image_tag: $IMAGE_TAG
-  #  pull: $IMAGE_PULL
-  #  options: '--privileged=true --net=bridge -e FOO=true -e BOO=false' 
+  pre_ci_boot:
+    image_name: drydock/u14nodall
+    image_tag: master
+    pull: true
+    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false' 
 
   ci:
    
