@@ -1,0 +1,27 @@
+jobs:
+  - name: runsh-job-pub
+    type: runSh
+    allowPublicAccess: false
+    steps:
+      - IN: sample-pub
+     # - IN: trigger01
+    #  - IN: test-trigger01
+      - TASK:
+        - script: IN/sample-pub/gitRepo/echo.sh
+    flags: job1
+    
+  - name: runcliscript-job-pub
+    type: runCLI
+    allowPublicAccess: true
+    steps:      
+      - IN: sample-pvt
+      - TASK:
+        - script: IN/sample-pub/gitRepo/echo.sh
+    flags: job-runcli
+        
+        
+  - name: manifest_dep_pub
+    type: manifest
+    steps:
+      - IN: sample_img_pub 
+    flags: manifest
