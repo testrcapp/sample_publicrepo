@@ -64,11 +64,11 @@ build:
     - docker build -t=gcr.io/vidya-project/node1-img:master.33  .
     - docker push gcr.io/vidya-project/node1-img:master.33
   # Testing quay build and push
-    - docker build -t=quay.io/revathird/samplenode_test .
-    - docker push quay.io/revathird/samplenode_test
+    #- docker build -t=quay.io/revathird/samplenode_test .
+    #- docker push quay.io/revathird/samplenode_test
    # Testing ecr build and push
-    - docker build -t=742038439709.dkr.ecr.us-west-2.amazonaws.com/sample_node .
-    - docker push 742038439709.dkr.ecr.us-west-2.amazonaws.com/sample_node
+    #- docker build -t=742038439709.dkr.ecr.us-west-2.amazonaws.com/sample_node .
+    #- docker push 742038439709.dkr.ecr.us-west-2.amazonaws.com/sample_node
 
 integrations:
   hub:
