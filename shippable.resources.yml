@@ -20,7 +20,7 @@ resources:
 
   - name: sample_img_pub
     type: image
-    integration: ship-docker
+    integration: docker
     pointer:
       sourceName: "shippabledocker/pipelinev2"
     seed:
