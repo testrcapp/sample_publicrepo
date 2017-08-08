@@ -5,35 +5,12 @@ language: node_js
 node_js:
   - 0.10
     
-env:
-  global:
-  #Testing for user defined envs and secure envs
-    - TEST=FOO
-    - secure: NYL2aPJR3pTf9AKih9xFy/MkIvoGC3pW2yftNhDB6wY0s+geyPu0PlDxTZop1vDNehB6nXX4dg8ycHhwvgD/2Q+FFTyowoEeAIyGwWHxPU0cjGMWwA+GT2cNvdnhZ1xlXhuLyoX8D1qoUt4p7gBtf0uSVMauc1yndWt/5vRjgtl4MCx1KCcaAcT9SA4C605Q/avriGrjUlQdW9mfbf+qrdYCS8mIdryB+2bxDTKikvPA9YE4iIG8LR4zLNjYVC5Qcr8n06E7lV1tZTNxRAag1F76xcIDIE53S+n0f7bH05d7Yl9G3l89uc1qrbGkP5+pmIPEuG/37yNZhbvvjoRlvQ==
-    - IMAGE_NAME=shippabledocker/sample_node_pvt
-    - IMAGE_TAG=latest.40
-    - IMAGE_PULL=true     
-    
-  matrix:
-    - M1=ONE
-#Testing for include and exclude branches
 
 #Uncomment below section to disable the private submodules
 git:
    submodules: false
-build:
-  pre_ci:
-  #Testing for pre_ci carrying over to pre_ci_boot
-    - export IMAGE_TAG="latest"
-    - echo $IMAGE_TAG
    
-    
-  pre_ci_boot:
-    image_name: $IMAGE_NAME
-    image_tag: $IMAGE_TAG
-    pull: $IMAGE_PULL
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false' 
-
+build:
   ci:
    
     - node --version
@@ -41,72 +18,38 @@ build:
     - docker --version
     - docker info
     - docker ps
-    - echo $TEST
-    - echo $secure
-    - echo $M1
-    - echo $IMAGE_NAME
-    - echo $IMAGE_TAG
-    - echo $IMAGE_PULL
-    - echo $custom #echoes the env specified from UI custom build
-    - echo $FOO
-    - echo $GOO
-    - echo $BUILD_NUM #echoes the envs specified in the payload of project-event trigger
-    - echo $key1 #echoes the value of custom integrations added through key-value pair integrations.
-    - echo $key2
     - echo jobTriggeredByName="$JOB_TRIGGERED_BY_NAME"
-   
-   
-  post_ci:
-  # Testing docker build and push
-    - docker build -t=$IMAGE_NAME:$IMAGE_TAG .
-    - docker push $IMAGE_NAME:$IMAGE_TAG
-  # Testing gcr build and push
-    - docker build -t=gcr.io/vidya-project/node1-img:master.33  .
-    - docker push gcr.io/vidya-project/node1-img:master.33
-  # Testing quay build and push
-    - docker build -t=quay.io/revathird/samplenode_test .
-    - docker push quay.io/revathird/samplenode_test
-   # Testing ecr build and push
-    - docker build -t=742038439709.dkr.ecr.us-west-2.amazonaws.com/sample_node .
-    - docker push 742038439709.dkr.ecr.us-west-2.amazonaws.com/sample_node
 
 integrations:
-  hub:
+ # hub:
  #Docker integration
-    - integrationName: ship-docker
-      type: docker 
+   # - integrationName: ship-docker
+  #    type: docker 
   #GCR integration
-    - integrationName: ship-gcr
-      type: gcr
+  #  - integrationName: ship-gcr
+  #    type: gcr
   #ECR integration
-    - integrationName: ship-ecr
-      type: ecr
-      region: us-west-2
-      branches: #Testing the wildcards for branches exclude
-        except:
-          - n*
+  #  - integrationName: ship-ecr
+   #   type: ecr
+  #    region: us-west-2
+   #   branches: #Testing the wildcards for branches exclude
+   #     except:
+  #        - n*
   #Quay.io integration    
-    - integrationName: ship-quay
-      type: quay.io
-      branches: #Testing the wildcards for branches include
-        only:
-          - m*
+  #  - integrationName: ship-quay
+  #    type: quay.io
+    #  branches: #Testing the wildcards for branches include
+    #    only:
+     #     - m*
           
-  generic:
-    - integrationName: "ship-keyvalue"
+  #generic:
+   # - integrationName: "ship-keyvalue"
 
   notifications:
     - integrationName: email         
       type: email        
       recipients: 
-        - shiptest.rc.ow@gmail.com
+        #- shiptest.rc.ow@gmail.com
         - shiptest.rc.me@gmail.com
       on_success: always 
-      
-      
-      
-      
-      
-      
-      
       
