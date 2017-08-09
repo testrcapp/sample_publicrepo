@@ -25,3 +25,18 @@ jobs:
     steps:
       - IN: sample_img_pub 
     flags: manifest
+    
+  - name: runsh-job2-pub
+    type: runSh
+    allowPublicAccess: true
+    steps:
+      - IN: runsh-job-pub
+      - TASK:
+        - script: ls
+    
+  - name: runcliscript-job2-pub
+    type: runCLI
+    steps:      
+      - IN: runcliscript-job-pub
+      - TASK:
+        - script: ls
