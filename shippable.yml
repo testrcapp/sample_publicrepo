@@ -20,36 +20,48 @@ build:
     - docker ps
     - echo jobTriggeredByName="$JOB_TRIGGERED_BY_NAME"
 
-integrations:
- # hub:
- #Docker integration
-   # - integrationName: ship-docker
-  #    type: docker 
-  #GCR integration
-  #  - integrationName: ship-gcr
-  #    type: gcr
-  #ECR integration
-  #  - integrationName: ship-ecr
-   #   type: ecr
-  #    region: us-west-2
-   #   branches: #Testing the wildcards for branches exclude
-   #     except:
-  #        - n*
-  #Quay.io integration    
-  #  - integrationName: ship-quay
-  #    type: quay.io
-    #  branches: #Testing the wildcards for branches include
-    #    only:
-     #     - m*
-          
-  #generic:
-   # - integrationName: "ship-keyvalue"
-
+integrations:    
   notifications:
+    - integrationName: notify-slack 
+      type: slack
+      recipients:
+        - "#random" 
+        - "#rc-public" 
+        - "#rc-private"
+      on_start: always
+      on_success: always
+      on_failure: always 
+      on_cancel: always
+       
     - integrationName: email         
       type: email        
-      recipients: 
-        #- shiptest.rc.ow@gmail.com
+      recipients:  
+        - shiptest.rc.ow@gmail.com
         - shiptest.rc.me@gmail.com
+     # sendConsoleLogs : true
+     # sendCoverageReports : true
+      on_start: always
       on_success: always 
-      
+      on_failure: always 
+      on_cancel: always
+     
+    - integrationName: irc  
+      type: irc
+      recipients:
+        - "webchat.irchighway.net#irc-three"
+        - "webchat.irchighway.net#test-rc"
+      on_start: always
+      on_success: always      
+      on_failure: always 
+      on_cancel: always
+    
+    - integrationName: notify-hipchat
+      type: hipchat
+      recipients: 
+        - '#rc-private'
+        - '#rc-public'
+        - '@shiptestrcow'
+      on_start: always
+      on_success: always   
+      on_failure: always
+      on_cancel: always
