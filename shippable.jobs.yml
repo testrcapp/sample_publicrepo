@@ -16,7 +16,7 @@ jobs:
     steps:      
       - IN: sample-scriptpvt
       - TASK:
-        - script: IN/sample-pub/gitRepo/echo.sh
+        - script: IN/sample-scriptpvt/gitRepo/echo.sh
     flags: job-runcli
         
         
