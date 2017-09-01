@@ -11,7 +11,7 @@ git:
    
 build:
   ci:
-    - echo "Hello!"
+    - echo "Hello!!"
     - node --version
     - lsb_release -a
     - docker --version
