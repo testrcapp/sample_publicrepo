@@ -14,7 +14,7 @@ jobs:
     type: runCLI
     allowPublicAccess: true
     steps:      
-      - IN: sample-pvt
+      - IN: sample-scriptpvt
       - TASK:
         - script: IN/sample-pub/gitRepo/echo.sh
     flags: job-runcli
