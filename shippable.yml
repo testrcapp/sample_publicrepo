@@ -8,6 +8,8 @@ node_js:
 #Uncomment below section to disable the private submodules
 git:
    submodules: false
+env:
+  - secure: lXSZhHdFui76pD7LYSfTAjD/6IKkl1wAgobE7TvJ4W3agH7KqNHFqiXK/DLesTvXdOVHJAn0kqiu5QJJ1M5W42nlrNJqoQR3XivCoE/L9pEQMh9BNtAHdcIKRnoxj04AO2hV1bXyv0HUda5aZebpqqK9KHORLaUAkZLdHsKIpPiF5AL02B5hOWhvAGI9gpUguNAIzolX2KkSluAngHJqwk4BLFSDAOj/jeINPijU08uvx9zgB1/kjemDlFJr/h6HCPmX4GdN0QNzDT7/aG4EzVolab0lnpNtrzU7TCJMQXwc0A9xmPNXLEiPXLbyEDVv6/FTR72qYNnSJOjh7JbR/w==
    
 build:
   ci:
@@ -17,6 +19,7 @@ build:
     - docker --version
     - docker info
     - docker ps
+    - echo $p1
     - echo jobTriggeredByName="$JOB_TRIGGERED_BY_NAME"
 
 integrations:    
