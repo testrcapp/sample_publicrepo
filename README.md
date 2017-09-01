@@ -38,17 +38,7 @@ Test Cases that are covered in CI build triggering manually:
 17. Key-value pair integration.
   - $key1 echoes `value1` and $key2 echoes `value2` as these are the values integrated from account integration.
   
-  
-  
-    
-  
- 
+prod badges
+[![Run Status](https://api.shippable.com/projects/59a91446d1902e0700974330/badge?branch=master)](https://app.shippable.com/bitbucket/shiptest-rc-me/sample_publicrepo)
 
-
-
-
-     
-
-
-
-
+[![Coverage Badge](https://api.shippable.com/projects/59a91446d1902e0700974330/coverageBadge?branch=master)](https://app.shippable.com/bitbucket/shiptest-rc-me/sample_publicrepo)
