@@ -20,6 +20,7 @@ jobs:
         
   - name: manifest_dep_pub
     type: manifest
+    allowPublicAccess: true
     steps:
       - IN: sample_img_pub 
     flags: manifest
@@ -41,6 +42,7 @@ jobs:
 
   - name: sample_publicrepo_runCI
     type: runCI
+    allowPublicAccess: true
     steps:
       - IN: sample_publicrepo_ciRepo
     flags:
@@ -66,15 +68,17 @@ jobs:
       - IN: sample-dopts-pub
     on_success:
       - NOTIFY: sample-email-pub
-      - NOTIFY: sampple-slack-pub
+      - NOTIFY: sample-slack-pub
       
   - name: sample-provision-pub                                                 
-    type: provision                                             
+    type: provision     
+    allowPublicAccess: true
     steps:
       - IN: sample-files-pub
       
   - name: ar-jenkins                  # a memorable, unique name. this is how your job will be referred to in shippable pipelines
-    type: jenkinsJob                  # The type of the job (should not be changed by the user)
+    type: jenkinsJob # The type of the job (should not be changed by the user)
+    allowPublicAccess: true
     integration: "jenkins"   # The name of your Jenkins integration (created via accountSettings page)
     pointer:
       sourceName: "firstjob"          # The name of your Jenkins job
