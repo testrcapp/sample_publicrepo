@@ -100,3 +100,9 @@ resources:
  
   - name: sample-state-pub
     type: state
+  
+  - name: sample-dopts-pub
+    type: dockerOptions
+    version:
+      memory: 100
+      
