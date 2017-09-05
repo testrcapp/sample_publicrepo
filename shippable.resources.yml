@@ -25,6 +25,7 @@ resources:
       sourceName: "shippabledocker/pipelinev2"
     seed:
       versionName: "deploy.2"
+      
   - name: sample_img_pub123
     type: image
     integration: docker
@@ -32,3 +33,70 @@ resources:
       sourceName: "shippabledocker/pipelinev2"
     seed:
       versionName: "deploy.2"
+  
+  - name: sample-version-pub
+    type: version
+    seed:
+      versionName: "5.9.1"
+      
+  - name: sample-dockerintegration-pub
+    type: integration
+    integration: "docker"
+    
+  - name: sample-loadbalancer-pub
+    type: loadBalancer
+    pointer:
+      sourceName: EC2Contai-EcsElast-GPCOXIIKWPUJSREYA
+      
+  - name: longnameforresourceinresourcesdotshippabledotyml-shipDockerCli-pub
+    type: cliConfig
+    integration: "docker"
+    
+  - name: sample-files-pub
+    type: file
+    integration: docker
+    pointer:
+      sourceName: "random"
+    seed:
+      versionName: "random-2"
+      
+  - name: sample-ddccluster-pub
+    type: cluster
+    integration: ddc
+    pointer:
+      sourceName : "nothing"
+
+  - name: sample-slack-pub
+    type: notification
+    integration: "notify-slack"
+    pointer:
+      recipients:
+        - "#pipeline-pvt"
+        - "#pipeline-public"
+        - "@shiphitchcock1"
+
+  - name: sample-email-pub
+    type: notification
+    pointer:
+      method: email
+      recipients: 
+        - "varsha@shippable.com"
+        - "shiptest-rc-me@gmail.com"
+        
+  - name: sample-params-pub
+    type: params
+    version:
+      params:
+        foo: bar
+        #secure: Xuq1cwGOn1lR1UTMfcwhdPUhJJXr0FeeG/M0/l4v7HFcjIRdrML13//R4RbMWxIeUtmdRWT1y3HRgQSqsRbYRIYF/6rTYH3/eazkowA2hHPZpT8vNfr3tFZJwQeSTf0qGtZOMO1iOacgaFOBgAdBCheJA8tN3ARHapUWk5bxuj7CpIq/LNWEbR/TcNNWaZJkyoWeK6/4U61xNPbVgyL1e73m3WmHPcGwpgTyxW+T1jqgh5m99D3p87UrfTeS6ss5YNA8lkZmFpdYZrq2LIKBMSJuq46Vj1VwRrtRGXYN2eYzmyDvpevciShm6Ai8w8o18eY6dwKrch8PSNloCVDHDA== 
+        DB_HOST: "ds015700.mlab.com"
+        DB_NAME: "ayeaye"
+        DB_PORT: "15700"
+        
+  - name: sample-replica-pub
+    type: replicas
+    version:
+      count: 2
+ 
+  - name: sample-state-pub
+    type: state
