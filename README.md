@@ -40,6 +40,10 @@ Test Cases that are covered in CI build triggering manually:
   
   
   [![Run Status](https://rcapi.shippable.com/projects/5989b05fd48f5b0500ad54e4/badge?branch=master)](https://rcapp.shippable.com/bitbucket/shiptest-rc-me/sample_publicrepo)
+  
+  
+  
+  
 prod badges
 [![Run Status](https://api.shippable.com/projects/59a91446d1902e0700974330/badge?branch=master)](https://app.shippable.com/bitbucket/shiptest-rc-me/sample_publicrepo)
 
