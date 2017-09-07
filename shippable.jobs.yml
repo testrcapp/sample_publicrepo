@@ -1,44 +1,29 @@
 jobs:
-  - name: runsh-job-pub
+  - name: runsh-job-pubparam
     type: runSh
     allowPublicAccess: false
     steps:
-      - IN: sample-pub
+      - IN: sample-pubparam
       - TASK:
         - script: IN/sample-pub/gitRepo/echo.sh
-    flags: job1
+    flags: job1param
     
-  - name: runcliscript-job-pub
+  - name: runcliscript-job-pubparam
     type: runCLI
     allowPublicAccess: true
     steps:      
-      - IN: sample-scriptpvt
+      - IN: sample-scriptpvtparam
       - TASK:
         - script: IN/sample-scriptpvt/gitRepo/echo.sh
-    flags: job-runcli
+    flags: job-runcliparam
         
         
-  - name: manifest_dep_pub
+  - name: manifest_dep_pubparam
     type: manifest
     allowPublicAccess: true
     steps:
-      - IN: sample_img_pub 
-    flags: manifest
-    
-  - name: runsh-job2-pub
-    type: runSh
-    allowPublicAccess: true
-    steps:
-      - IN: runsh-job-pub
-      - TASK:
-        - script: ls
-    
-  - name: runcliscript-job2-pub
-    type: runCLI
-    steps:      
-      - IN: runcliscript-job-pub
-      - TASK:
-        - script: ls
+      - IN: sample_img_pubparam
+    flags: manifestparam
 
   - name: sample_publicrepo_runCI
     type: runCI
@@ -46,41 +31,24 @@ jobs:
     steps:
       - IN: sample_publicrepo_ciRepo
     flags:
-      - sample_publicrepo_runCI
-      - sample_publicrepo_runCIEnabledFromCIbutAddedFlagsInJobsYml
+      - sample_publicrepo_runCIparam
+      - sample_publicrepo_runCIEnabledFromCIbutAddedFlagsInJobsYmlparam
       
       
-  - name: sample-release-pub
+  - name: sample-release-pubparam
     type: release
     allowPublicAccess: true
     steps:
-      - IN: sample-version-pub
+      - IN: sample-version-pubparam
       - TASK: managed
         bump: rc
-        
-  - name: sample-ddcdeploy-pub
-    type: deploy
-    allowPublicAccess: true
+
+  - name: runsh-param1-pub
+    type: runSh
     steps:
-      - IN: sample-ddccluster-pub
-      - IN: manifest_dep_pub
-      - IN: sample-params-pub
-      - IN: sample-dopts-pub
-    on_success:
-      - NOTIFY: sample-email-pub
-      - NOTIFY: sample-slack-pub
-      
-  - name: sample-provision-pub                                                 
-    type: provision     
-    allowPublicAccess: true
-    steps:
-      - IN: sample-files-pub
-      
-  - name: ar-jenkins                  # a memorable, unique name. this is how your job will be referred to in shippable pipelines
-    type: jenkinsJob # The type of the job (should not be changed by the user)
-    allowPublicAccess: true
-    integration: "jenkins"   # The name of your Jenkins integration (created via accountSettings page)
-    pointer:
-      sourceName: "firstjob"          # The name of your Jenkins job
-    steps:
-      - OUT: "sample-files-pub"
+      - IN: test_params1pub
+      - TASK:
+        - script: echo "A=$A"
+        - script: echo "B=$B"
+        - script: echo "p1=$p1"
+        - script: echo "p2=$p2"
