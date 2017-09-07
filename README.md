@@ -39,9 +39,9 @@ Test Cases that are covered in CI build triggering manually:
   - $key1 echoes `value1` and $key2 echoes `value2` as these are the values integrated from account integration.
   
   
+  
   [![Run Status](https://rcapi.shippable.com/projects/5989b05fd48f5b0500ad54e4/badge?branch=master)](https://rcapp.shippable.com/bitbucket/shiptest-rc-me/sample_publicrepo)
-  
-  
+  [![Coverage Badge](https://rcapi.shippable.com/projects/5989b05fd48f5b0500ad54e4/coverageBadge?branch=master)](https://rcapp.shippable.com/bitbucket/shiptest-rc-me/sample_publicrepo)
   
   
 prod badges
