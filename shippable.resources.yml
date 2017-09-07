@@ -26,7 +26,7 @@ resources:
     seed:
       versionName: "deploy.2"
   
-  - name: sample-version-pub
+  - name: sample-version-pubparam
     type: version
     seed:
       versionName: "5.9.1"
