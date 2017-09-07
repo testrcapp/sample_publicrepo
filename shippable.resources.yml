@@ -106,20 +106,34 @@ resources:
     type: params
     version:
       params:
-        A: one
-        B: two
-        p1: resourceymlp1
-        p2: resourceymlp2
+        A: oneversion2
+        B: twoversion2
+        p1: resourceymlp1version2
+        p2: resourceymlp2version2
     flags: overwriteparams
   
   - name: test_params2pub
     type: params
     version:
       params:
-        p2: rc2
-        bar: resourceymlbar
-        foo: resourceymlfoo
-        p3: rc3
+        p3: rc3version2
+        bar: resourceymlbarversion2
+        foo: resourceymlfooversion2
+        p4: rc4version2
         #secure: taXEdvIW+0PEUtHN+VBWdRjnlutz6VuiRi+yZIM5Vao+mcodnfJFxcmBS/2O1TD8dLoXEjb6JZO+gmYgSGJMgoB9zzMNlSs+R88jR0+dyHJsREP4/cT2YiPQGhttvsr5bMnM6p62HTQNd8cItDUEEqNJkorkKMFiuZqY24nb2Xq7znXE5j0mUKzkD1aY2fcAEaYjcs6Gra4pvsyhKClDStAvdXpCLmRTlrVRpaaCuqWUwSBODTR0aV7MFdPmCDZYWQr051Lwp0d0VeABFRD7HDx8fNTiZbP0ItRAb9cgKK5EqL0y8OQ8AzmzDAUA36GIl6cPlpvoK2bkjeJea58t/Q== #DEV1=alpha1
     flags: overwriteparams
-    
+  
+  - name: test_params3pub
+    type: params
+    version:
+      params:
+        p5: rc5
+        p6: rc6
+
+  - name: test_params4pub
+    type: params
+    version:
+      params:
+        p7: rc7
+        p8: rc8
+        
