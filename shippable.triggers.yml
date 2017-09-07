@@ -1,0 +1,10 @@
+triggers:
+  - name: tr1
+    type: trigger
+    version:
+      counter: 2
+      
+  - name: tr2
+    type: trigger
+    version:
+      counter: 0
