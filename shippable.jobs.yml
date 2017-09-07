@@ -40,14 +40,14 @@ jobs:
       - TASK:
         - script: ls
 
-  - name: sample_publicrepo_runCI
-    type: runCI
-    allowPublicAccess: true
-    steps:
-      - IN: sample_publicrepo_ciRepo
-    flags:
-      - sample_publicrepo_runCI
-      - sample_publicrepo_runCIEnabledFromCIbutAddedFlagsInJobsYml
+ # - name: sample_publicrepo_runCI
+  #  type: runCI
+  #  allowPublicAccess: true
+   # steps:
+   #   - IN: sample_publicrepo_ciRepo
+   # flags:
+   #   - sample_publicrepo_runCI
+    #  - sample_publicrepo_runCIEnabledFromCIbutAddedFlagsInJobsYml
       
       
   - name: sample-release-pub
