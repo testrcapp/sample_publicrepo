@@ -21,6 +21,8 @@ build:
     - docker ps
     - echo $p1
     - echo jobTriggeredByName="$JOB_TRIGGERED_BY_NAME"
+    - echo "env1=$env1"
+    - echo "env2=$env2"
 
 integrations:    
   notifications:
