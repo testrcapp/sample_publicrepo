@@ -52,3 +52,28 @@ jobs:
         - script: echo "B=$B"
         - script: echo "p1=$p1"
         - script: echo "p2=$p2"
+  
+  - name: runsh-param2-pub
+    type: runSh
+    steps:
+      - IN: test_params2pub
+      - TASK:
+        - script: echo "foo=$foo"
+        - script: echo "boo=$boo"
+        - script: echo "p3=$p3"
+        - script: echo "p4=$p4"
+  
+  - name: runsh-param3-pub
+    type: runSh
+    steps:
+      - IN: test_params3pub
+      - IN: runsh-param2-pub
+      - TASK:
+        - script: echo "foo=$foo"
+        - script: echo "boo=$boo"
+        - script: echo "p3=$p3"
+        - script: echo "p4=$p4"
+        - script: echo "p5=$p5"
+        - script: echo "p6=$p6"
+        
+        
