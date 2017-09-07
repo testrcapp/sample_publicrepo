@@ -3,7 +3,7 @@ language: node_js
 
 # Version number
 node_js:
-  - 0.10    
+  - 8.1   
 
 #Uncomment below section to disable the private submodules
 git:
@@ -20,6 +20,8 @@ build:
     - docker info
     - docker ps
     - echo $p1
+    - echo "env1=$env1"
+    - echo "env2=$env2"
     - echo jobTriggeredByName="$JOB_TRIGGERED_BY_NAME"
 
 integrations:    
