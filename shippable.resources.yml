@@ -1,24 +1,24 @@
 resources:
-  - name: sample-pub
+  - name: sample-pubparam
     type: gitRepo
     integration: bitbucket
     pointer:
       sourceName: "shiptest-rc-me/sample-script-pub"
       branch: master      
   
-  - name: sample-scriptpvt
+  - name: sample-scriptpvtparam
     type: gitRepo
     integration: bitbucket
     pointer:
       sourceName: "shiptest-rc-me/sample-script-pvt"
       branch: master
       
-  - name: test-trigger01-pub
+  - name: test-trigger01-pubparam
     type: time
     seed:
       interval: "*/4 * * * *"
 
-  - name: sample_img_pub
+  - name: sample_img_pubparam
     type: image
     integration: docker
     pointer:
@@ -30,24 +30,11 @@ resources:
     type: version
     seed:
       versionName: "5.9.1"
-      
-  - name: sample-dockerintegration-pub
-    type: integration
-    integration: "docker"
-      
-  - name: longnameforresourceinresourcesdotshippabledotyml-shipDockerCli-pub
-    type: cliConfig
-    integration: "docker"
- 
-  - name: sample-state-pub
-    type: state
-  
-  - name: sample-dopts-pub
-    type: dockerOptions
-    version:
-      memory: 100
 
-  - name: ar-paramstestsh
+  - name: sample-state-pubparam
+    type: state
+    
+  - name: ar-paramstestshpub
     type: params
     version:
       params:
@@ -55,7 +42,7 @@ resources:
         key1: value1
         #secure: Xuq1cwGOn1lR1UTMfcwhdPUhJJXr0FeeG/M0/l4v7HFcjIRdrML13//R4RbMWxIeUtmdRWT1y3HRgQSqsRbYRIYF/6rTYH3/eazkowA2hHPZpT8vNfr3tFZJwQeSTf0qGtZOMO1iOacgaFOBgAdBCheJA8tN3ARHapUWk5bxuj7CpIq/LNWEbR/TcNNWaZJkyoWeK6/4U61xNPbVgyL1e73m3WmHPcGwpgTyxW+T1jqgh5m99D3p87UrfTeS6ss5YNA8lkZmFpdYZrq2LIKBMSJuq46Vj1VwRrtRGXYN2eYzmyDvpevciShm6Ai8w8o18eY6dwKrch8PSNloCVDHDA== 
 
-  - name: ar-paramsUserDefined
+  - name: ar-paramsUserDefinedpub
     type: params
     version:
       params:
@@ -66,16 +53,16 @@ resources:
         #pinneduserDv7: seven
         #pinneduserDv8: eight
     
-  - name: ar-paramOnlyOne
+  - name: ar-paramOnlyOnepub 
     type: params
     version:
       params:
         env3: three
         
-  - name: ar-paramsOneSecure
-    type: params
-    version:
-      params:
+ # - name: ar-paramsOneSecurepub
+  #  type: params
+  #  version:
+   #   params:
         #secure: ocs0yZS81NFOJ4vVWdVMVWaNG2s1Sg9R+Lpm3viBx/AQiXs95Cl+CxsoAgP2mekN+Ft8c1FQhO7nkupODRdtgnWYzUbul333QHpGisc3aAkmANJ5qdo/fd8j9V+VL1hv7a2BNZz6vSPVUZpgXAPokL1lHkeGWBsKtBBL2c2ZuSNN69ByUDcWENAdxNSQMUGLdp5OlJ/e7DGPOlPY2TgW/qrrBOyIccF22ZQz/VoUiGaoPNtVwgWs2D9oGdUll9N5AgBSoa6FEopt9lR6whDkTrfsXdlOnqDQdiFw6iWT1ZqVK0iqSSrxNdeQmkE2wLFCPLrVOKFPPNlwu/Zp6+UU1Q== #env4: four
  
   #- name: ar-paramsSecureVars
@@ -86,25 +73,25 @@ resources:
     #    #secure: hielJQMoayWuTUuXZHjUgeU254lcvUUoNFwAxKzxWOZCJ77du1fhkE2huYuv1itf8HlHkrv/DPEg+g8rxNbd2d6YDSO4oZqo95bbBDvQQC4kvylPeeGIT8bFadDnLhAzwCYyV7EbK5L70lnZOCL6sVwI0IlLsF0rjpqh+K2AtCBc0U8qO+OcAa6WFoMnl2hwflE/JXrJVPUUOFWpFki+GqY6cRL4TDCO66XNz7PWx006hHzEKGyA5wxU3aKxj0Gi/IB8zeqEhR34VNGD10wUkGuOIE37otZqh2ZmmPMpkGp3tPvIj512Nu8UNhkNH+v6lsgliqvcRrHgpDUiRPTUQw==
     #    #  ### we cant add two secure env in same param resource this is by design
         
-  - name: ar-paramsUserdefinedSecure
-    type: params
-    version:
-      params:
-        env7: seven
+  #- name: ar-paramsUserdefinedSecurepub
+   # type: params
+   # version:
+    #  params:
+     #   env7: seven
         #secure: H9E1WGRsiN2oFBTapWlhxAC7jaGBklid7Y/GtpCClj/VZlaNaReeTPaVUFpgb699qSLL/mGcM8/NamZYW5JCVMaz5p44VrzVrVsnEAPiCLAS044UXmQEdh/dnfXZ91+FSx8TZr5wvYxpy+Oh6zkBaNI96tp7MR61vPIzaripXkIyhAsPNK5MUccZai9mXwk8zCWj7Sh0y3gyJFNByqKoY09WNY8VxKPA93ypSh1PUHMxFraN6wjpfXNT0cE7r+ObskQVHs0yAkG2w8VHwxfC77J90NJwlJQITJMkoACImjzq5zXbBCNzADBfCico2pBYdSpWbyXotGGtGOWBx4AtWA==
-        env9: nine
+      #  env9: nine
         
-  - name: ar-paramsUserdefinedSecureOverride
-    type: params
-    version:
-      params:
-        env7: override7 testspace
-        env8: ovveride8secure       
-        #secure: eBPHfxihVxFoJnBXLJQVuX49J7y7xBibBW3O9Pung7eMFujP/CeWxUcRv9kBSJvi8Vo/SMg50QipOu+oFee5ncimGqF7T6YHwNF5FKmN6cEZAmTkST/z8Y3YGBBrAq8fckfcU/qDPHAmfMP0Vu4tPmhBc4RUusqBJKKRL4vHsICzy/RCJzihJQ3ouueLTI2/N5ghu8rS1ot7/BBGDjFaNkdVHkd6gqBu5R/iU1SrE2aFFTs4pzOtlqJX9YZWCRhv4/pjs1bl/ZkP81DtkDnsir2qJYvzmJu4b92smeiEaTmebDUYTC0jMObUBXge1rAv3fjkXREoklNNWIpTRZadTw==
-        env10: ten
-        GITHUB: https://github.com
-
-  - name: ar-paramsUrls
+  #- name: ar-paramsUserdefinedSecureOverridepub
+  #  type: params
+   # version:
+   #   params:
+   #     env7: override7 testspace
+    #    env8: ovveride8secure       
+    #    #secure: eBPHfxihVxFoJnBXLJQVuX49J7y7xBibBW3O9Pung7eMFujP/CeWxUcRv9kBSJvi8Vo/SMg50QipOu+oFee5ncimGqF7T6YHwNF5FKmN6cEZAmTkST/z8Y3YGBBrAq8fckfcU/qDPHAmfMP0Vu4tPmhBc4RUusqBJKKRL4vHsICzy/RCJzihJQ3ouueLTI2/N5ghu8rS1ot7/BBGDjFaNkdVHkd6gqBu5R/iU1SrE2aFFTs4pzOtlqJX9YZWCRhv4/pjs1bl/ZkP81DtkDnsir2qJYvzmJu4b92smeiEaTmebDUYTC0jMObUBXge1rAv3fjkXREoklNNWIpTRZadTw==
+    #    env10: ten
+    #    GITHUB: https://github.com
+#
+  - name: ar-paramsUrlsPub
     type: params
     version:
       params:
@@ -115,7 +102,7 @@ resources:
         #secure: w+yLpzlHKW1IILAHC3lyWFUddoaswNdoikpl11AhGUM7YMrIpLQ/gLZXQjulqWUGVxTFO7BebAqopgPYxEXtgOLCAqXzQ983eRSr5wke9jN07M3nWA37FARPKLzTXbpc4gqr62AR3r5Dk8ptMyzvH7cY9xaBbJBGCpf451TnqzhOj8b/gt9rAxcJInHLDFLgXiyS0bkdHjC2IzpoxYma7JkvFiv4oi674mmWIWwIP/kNEjwtrYumzfE8xXuAC/8anxsZ6Gjwq95Ai71l0SZqZoZDtoAZjBiee7GN2q5XrfppIav3KPIPf9XLRAo3ZK3H5WYtqoWSylRW+Ldf+hxwDg== #SHIPPABLE=https://www.shippable.com
         version3: https://github.com/shiphitchcock1/rc-plv2/blob/test-runsh/shippable.jobs.yml
 
-  - name: test_params1
+  - name: test_params1pub
     type: params
     version:
       params:
@@ -125,12 +112,14 @@ resources:
         p2: resourceymlp2
     flags: overwriteparams
   
-  - name: test_params2
+  - name: test_params2pub
     type: params
     version:
       params:
         p2: rc2
         bar: resourceymlbar
         foo: resourceymlfoo
+        p3: rc3
         #secure: taXEdvIW+0PEUtHN+VBWdRjnlutz6VuiRi+yZIM5Vao+mcodnfJFxcmBS/2O1TD8dLoXEjb6JZO+gmYgSGJMgoB9zzMNlSs+R88jR0+dyHJsREP4/cT2YiPQGhttvsr5bMnM6p62HTQNd8cItDUEEqNJkorkKMFiuZqY24nb2Xq7znXE5j0mUKzkD1aY2fcAEaYjcs6Gra4pvsyhKClDStAvdXpCLmRTlrVRpaaCuqWUwSBODTR0aV7MFdPmCDZYWQr051Lwp0d0VeABFRD7HDx8fNTiZbP0ItRAb9cgKK5EqL0y8OQ8AzmzDAUA36GIl6cPlpvoK2bkjeJea58t/Q== #DEV1=alpha1
     flags: overwriteparams
+    
