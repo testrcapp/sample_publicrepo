@@ -4,6 +4,7 @@ jobs:
     allowPublicAccess: false
     steps:
       - IN: sample-pub
+      - IN: tr1
       - TASK:
         - script: IN/sample-pub/gitRepo/echo.sh
     flags: job1
