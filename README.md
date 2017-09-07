@@ -1,4 +1,3 @@
-[![Run Status](https://rcapi.shippable.com/projects/5892e79ecb5ca30f0062c513/badge?branch=master)](https://rc.shippable.com/projects/5892e79ecb5ca30f0062c513)
 
 # coretest_singlebuildNod
 A SampleNod project to test basic cases for a single build.
