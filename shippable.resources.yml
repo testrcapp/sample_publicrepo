@@ -46,8 +46,8 @@ resources:
     type: params
     version:
       params:
-        env1: oneupdated
-        env2: twoupdated 
+        env1: oneupdatedversion2
+        env2: twoupdatedversion2 
         #pinneduserDv5: five
         #pinneduserDv6: six
         #pinneduserDv7: seven
@@ -106,20 +106,20 @@ resources:
     type: params
     version:
       params:
-        A: oneversion2
-        B: twoversion2
-        p1: resourceymlp1version2
-        p2: resourceymlp2version2
+        A: oneversion3
+        B: twoversion3
+        p1: resourceymlp1version3
+        p2: resourceymlp2version3
     flags: overwriteparams
   
   - name: test_params2pub
     type: params
     version:
       params:
-        p3: rc3version3
-        bar: resourceymlbarversion3
-        foo: resourceymlfooversion3
-        p4: rc4version3
+        p3: rc3version4
+        bar: resourceymlbarversion4
+        foo: resourceymlfooversion4
+        p4: rc4version4
         #secure: taXEdvIW+0PEUtHN+VBWdRjnlutz6VuiRi+yZIM5Vao+mcodnfJFxcmBS/2O1TD8dLoXEjb6JZO+gmYgSGJMgoB9zzMNlSs+R88jR0+dyHJsREP4/cT2YiPQGhttvsr5bMnM6p62HTQNd8cItDUEEqNJkorkKMFiuZqY24nb2Xq7znXE5j0mUKzkD1aY2fcAEaYjcs6Gra4pvsyhKClDStAvdXpCLmRTlrVRpaaCuqWUwSBODTR0aV7MFdPmCDZYWQr051Lwp0d0VeABFRD7HDx8fNTiZbP0ItRAb9cgKK5EqL0y8OQ8AzmzDAUA36GIl6cPlpvoK2bkjeJea58t/Q== #DEV1=alpha1
     flags: overwriteparams
   
@@ -127,8 +127,8 @@ resources:
     type: params
     version:
       params:
-        p5: rc5
-        p6: rc6
+        p5: rc5version2
+        p6: rc6version2
 
   - name: test_params4pub
     type: params
@@ -136,4 +136,4 @@ resources:
       params:
         p7: rc7
         p8: rc8
-        
+    
