@@ -43,4 +43,8 @@ triggers:
     type: trigger
     version:
       counter: 0
-      
+  
+  - name: tr10
+    type: trigger
+    version:
+      counter: 0
