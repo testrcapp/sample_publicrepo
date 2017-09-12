@@ -24,13 +24,13 @@ jobs:
      # - IN: sample_publicrepo_ciRepo
       #- IN: tr2
   
-  - name: runsh-jobrunCI-pub
-    type: runSh
-    steps:
-      - IN: sample_publicrepo_runCI
-      - IN: tr3
-      - TASK:
-        - script: ls
+  #- name: runsh-jobrunCI-pub
+  #  type: runSh
+  #  steps:
+      #- IN: sample_publicrepo_runCI
+   #   - IN: tr3
+    #  - TASK:
+   #     - script: ls
         
   - name: manifest_dep_pub
     type: manifest
