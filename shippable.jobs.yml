@@ -73,6 +73,9 @@ jobs:
   - name: sample-ddcdeploy-pub
     type: deploy
     allowPublicAccess: true
+    on_start:
+      - NOTIFY: sample-email-pub
+      - NOTIFY: sample-slack-pub
     steps:
       - IN: sample-ddccluster-pub
       - IN: manifest_dep_pub
