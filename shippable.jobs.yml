@@ -23,7 +23,7 @@ jobs:
     allowPublicAccess: true
     steps:
       - IN: sample_img_pubparam
-    flags: manifestparam
+    flags: manifestparam1
 
   #- name: sample_publicrepo_runCI
   #  type: runCI
