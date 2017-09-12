@@ -16,7 +16,7 @@ jobs:
       - IN: sample-scriptpvt
       - TASK:
         - script: IN/sample-scriptpvt/gitRepo/echo.sh
-    flags: job-runcli
+    flags: runcliscript-job-pub
   
   #- name: sample_publicrepo_runCI
    # type: runCI
