@@ -25,15 +25,15 @@ jobs:
       - IN: sample_img_pubparam
     flags: manifestparam
 
-  - name: sample_publicrepo_runCI
-    type: runCI
-    allowPublicAccess: true
-    steps:
-      - IN: sample_publicrepo_ciRepo
-      - IN: ar-paramsUserDefinedpub
-    flags:
-      - sample_publicrepo_runCIparam
-      - sample_publicrepo_runCIEnabledFromCIbutAddedFlagsInJobsYmlparam      
+  #- name: sample_publicrepo_runCI
+  #  type: runCI
+  #  allowPublicAccess: true
+  #  steps:
+  #    - IN: sample_publicrepo_ciRepo
+  #    - IN: ar-paramsUserDefinedpub
+ #   flags:
+  #    - sample_publicrepo_runCIparam
+   #   - sample_publicrepo_runCIEnabledFromCIbutAddedFlagsInJobsYmlparam      
       
   - name: sample-release-pubparam
     type: release
