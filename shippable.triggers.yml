@@ -28,4 +28,9 @@ triggers:
     type: trigger
     version:
       counter: 0
+
+  - name: tr7
+    type: trigger
+    version:
+      counter: 0
       
