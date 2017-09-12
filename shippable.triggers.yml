@@ -7,7 +7,7 @@ triggers:
   - name: tr2
     type: trigger
     version:
-      counter: 1
+      counter: 2
       
   - name: tr3
     type: trigger
