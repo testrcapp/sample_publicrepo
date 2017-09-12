@@ -8,3 +8,24 @@ triggers:
     type: trigger
     version:
       counter: 0
+      
+  - name: tr3
+    type: trigger
+    version:
+      counter: 5
+      
+  - name: tr4
+    type: trigger
+    version:
+      counter: 0
+      
+  - name: tr5
+    type: trigger
+    version:
+      counter: 5
+      
+  - name: tr6
+    type: trigger
+    version:
+      counter: 0
+      
