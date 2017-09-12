@@ -31,6 +31,14 @@ jobs:
       - IN: tr3
       - TASK:
         - script: ls
+  
+  - name: runcli-jobrunCI-pub
+    type: runCLI
+    steps:
+      #- IN: sample_publicrepo_runCI
+      - IN: tr4
+      - TASK:
+        - script: ls
         
   - name: manifest_dep_pub
     type: manifest
