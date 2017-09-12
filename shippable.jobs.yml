@@ -18,11 +18,11 @@ jobs:
         - script: IN/sample-scriptpvt/gitRepo/echo.sh
     flags: job-runcli
   
-  - name: sample_publicrepo_runCI
-    type: runCI
-    steps:
-      - IN: sample_publicrepo_ciRepo
-      - IN: tr2
+  #- name: sample_publicrepo_runCI
+   # type: runCI
+    #steps:
+     # - IN: sample_publicrepo_ciRepo
+      #- IN: tr2
   
   - name: runsh-jobrunCI-pub
     type: runSh
