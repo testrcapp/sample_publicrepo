@@ -48,3 +48,8 @@ triggers:
     type: trigger
     version:
       counter: 0
+  
+  - name: tr11
+    type: trigger
+    version:
+      counter: 0
