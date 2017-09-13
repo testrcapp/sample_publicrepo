@@ -78,6 +78,7 @@ jobs:
       - IN: manifest_dep_pub
       - IN: sample-params-pub
       - IN: sample-dopts-pub
+      - IN: tr5
     on_success:
       - NOTIFY: sample-email-pub
       - NOTIFY: sample-slack-pub
