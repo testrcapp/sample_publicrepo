@@ -22,7 +22,7 @@ triggers:
   - name: tr5
     type: trigger
     version:
-      counter: 5
+      counter: 6
       
   - name: tr6
     type: trigger
