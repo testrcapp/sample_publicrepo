@@ -3,7 +3,8 @@ language: node_js
 
 # Version number
 node_js:
-  - 8.1   
+  #- 8.1   
+  - 6.11
 
 #Uncomment below section to disable the private submodules
 git:
