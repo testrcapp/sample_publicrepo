@@ -10,7 +10,7 @@ resources:
     type: gitRepo
     integration: github
     pointer:
-      sourceName: "testrcapp/sample_privaterepo"
+      sourceName: "testrcapp/testprivate"
       branch: master
       
   - name: test-trigger01-pub
